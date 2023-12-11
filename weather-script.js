@@ -4,7 +4,8 @@ function checarTecla(event) {
     }
 
   function show_data() {
-    var city = document.getElementsByTagName("input")[0].value  
+    var city = document.getElementsByTagName("input")[0].value
+               .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     url = `https://api.weatherapi.com/v1/current.json?key=fa7e645695ab4f8db62103857232706&q=${city}`
     
     fetch(url)
