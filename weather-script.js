@@ -25,6 +25,7 @@ function checarTecla(event) {
                 <p>Wind: ${data['current'].wind_kph} km/h </p>
                 `
         const prg = document.createElement("div")  
+        prg.className = "card p-6"
         prg.innerHTML = result
 
         const showWeatherDiv = document.getElementById("show_weather");
