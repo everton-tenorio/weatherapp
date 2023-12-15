@@ -1,5 +1,5 @@
 function checarTecla(event) { 
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event['type'] === "click") {
       show_data(); 
     }
 
